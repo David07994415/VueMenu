@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, createWebHashHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import DrinkView from '../views/DrinkView.vue'
@@ -28,12 +28,14 @@ const prefix = import.meta.env.BASE_URL.replace(/\/$/, '')
 // 將 prefix 加到每個路由的 path 前面
 const routes = rawRoutes.map(route => ({
   ...route,
-  path: prefix + route.path
+  // path: prefix + route.path // github pages 需要使用 createWebHashHistory，就不需要prefix
+  path: route.path
 }))
 
 
 const router = createRouter({
-  history: createWebHistory(),
+  // history: createWebHistory(),  // github pages 需要使用 createWebHashHistory
+  history: createWebHashHistory(), // 使用 prefix 作為基礎路徑
   routes
 })
 

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import RegisterView from '../views/RegisterView.vue'
+import DrinkView from '../views/DrinkView.vue'
 
 const rawRoutes = [
   {
@@ -12,6 +13,11 @@ const rawRoutes = [
     path: '/Register',
     //name: 'Home',
     component: RegisterView
+  },
+  {
+    path: '/Drink',
+    //name: 'Home',
+    component: DrinkView
   },
   // 可以在這裡加入更多 routes
 ]

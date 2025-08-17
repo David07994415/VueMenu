@@ -9,7 +9,8 @@ console.log('base', base)
     <div class="wrapper">
       <nav class="d-flex justify-content-start align-items-center gap-3">
         <RouterLink :to="`${base}`">Menu(Week 1)</RouterLink>
-        <RouterLink :to="`${base}register`">Register(Week 2)</RouterLink>
+        <RouterLink :to="`${base}register/`">Register(Week 2)</RouterLink>
+        <RouterLink :to="`${base}drink/`">Drink(Week 3)</RouterLink>
       </nav>
     </div>
   </header>

@@ -14,6 +14,7 @@ console.log('base', base)
         <RouterLink to="/">Menu(Week 1)</RouterLink>
         <RouterLink to="/register">Register(Week 2)</RouterLink>
         <RouterLink to="/drink">Drink(Week 3)</RouterLink>
+        <RouterLink to="/threec">3C Goods(Week 4-Extented)</RouterLink>
       </nav>
     </div>
   </header>

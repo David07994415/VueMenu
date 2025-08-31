@@ -2,6 +2,10 @@
 import { ref,provide } from 'vue'
 import TodoLogin from '../components/TodoLogin.vue'
 import TodoRegister from '../components/TodoRegister.vue'
+import site from '../assets/site.js';  // 使用 default import
+const { apiRootUrl, handleErrorMsgs,swFire,getCookie,clearCookie,emailPattern } = site;  // 解構出需要的函數和變數
+
+
 const routeName = ref('Login');
 provide('routeName', routeName);
 

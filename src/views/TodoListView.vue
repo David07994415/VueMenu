@@ -3,6 +3,8 @@ import { ref,onMounted, computed} from 'vue'
 import { useRouter } from 'vue-router';
 import axios from 'axios';
 import TodoItem from '../components/TodoItem.vue'
+import site from '../assets/site.js';  // 使用 default import
+const { apiRootUrl, handleErrorMsgs,swFire,getCookie,clearCookie,emailPattern } = site;  // 解構出需要的函數和變數
 
 const router = useRouter();
 const userInfor = ref({

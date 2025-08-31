@@ -1,6 +1,9 @@
 <script setup>
     import { ref,inject, watch } from 'vue'
     import axios from 'axios';
+    import site from '../assets/site.js';  // 使用 default import
+    // 解構出需要的函數和變數
+    const { apiRootUrl, handleErrorMsgs } = site;
 
     const routeName = inject('routeName');
     

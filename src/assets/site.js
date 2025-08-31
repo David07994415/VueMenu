@@ -31,3 +31,14 @@ const clearCookie =()=> {
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const apiRootUrl = "https://todolist-api.hexschool.io"
+
+
+// 使用 default export 將一個物件導出
+export default {
+  swFire,
+  handleErrorMsgs,
+  getCookie,
+  clearCookie,
+  emailPattern,
+  apiRootUrl
+};

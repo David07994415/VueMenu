@@ -1,0 +1,20 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+const base = import.meta.env.BASE_URL
+// console.log('base', base)
+</script>
+
+<template> 
+    <div class="wrapper">
+      <nav class="d-flex justify-content-start align-items-center gap-3">
+        <!-- <RouterLink :to="`${base}`">Menu(Week 1)</RouterLink>
+        <RouterLink :to="`${base}register/`">Register(Week 2)</RouterLink>
+        <RouterLink :to="`${base}drink/`">Drink(Week 3)</RouterLink> -->
+        <RouterLink to="/">Menu(Week 1)</RouterLink>
+        <RouterLink to="/register">Register(Week 2)</RouterLink>
+        <RouterLink to="/drink">Drink(Week 3)</RouterLink>
+        <RouterLink to="/threec">3C Goods(Week 4-Extented)</RouterLink>
+        <RouterLink to="/todoLanding">TodoList(Week 5)</RouterLink>
+      </nav>
+    </div>
+</template>

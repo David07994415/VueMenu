@@ -1,5 +1,6 @@
 <script setup>
 import { ref,computed, onMounted, provide } from 'vue'
+import NavRouter from '../components/NavRouter.vue'
 import ThreecGood from '../components/ThreecGood.vue'
 import ThreecCart from '../components/ThreecCart.vue'
 import ThreecNofity from '../components/ThreecNotify.vue'
@@ -101,6 +102,7 @@ const removeCart = (id) => {
 </script>
 
 <template>
+  <NavRouter />
   <h2>Week 4-Extented: 3C Goods</h2>
   <div id="app" class="container py-4">
   <div class="row">

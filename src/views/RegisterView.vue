@@ -1,7 +1,8 @@
 <script setup>
   import { ref } from 'vue'
   import axios from 'axios'
-  
+  import NavRouter from '../components/NavRouter.vue'
+
   const apiRootUrl = "https://todolist-api.hexschool.io"
 
   const registerAccount = ref('')
@@ -51,7 +52,7 @@
   async function login() {
 
     if(loginAccount.value===''){
-        rloginResultObj.value = { isValid: false, message: '帳號不能為空' }
+        loginResultObj.value = { isValid: false, message: '帳號不能為空' }
         return
     }else if(loginPassword.value===''){
         loginResultObj.value = { isValid: false, message: '密碼不能為空' }
@@ -118,8 +119,8 @@
 </script>
 
 <template>
+  <NavRouter />
   <h2>Week 2: Register</h2>
-  
   <div class="d-flex justify-content-start flex-column gap-3">
     <div>
         <h3>註冊</h3>

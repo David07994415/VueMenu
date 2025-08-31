@@ -1,23 +1,25 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-const base = import.meta.env.BASE_URL
-console.log('base', base)
+import { useRouter } from 'vue-router'
+import { onMounted } from 'vue';
+const router = useRouter();
+
+
+onMounted(() => {
+
+  // 檢查 token 是否存在
+  router.beforeEach((to, from, next) => {
+    const token = document.cookie.includes('todolistToken=');
+    // console.log('token', token);
+    if (!token && to.path == '/TodoList') {
+      next({ path: '/TodoLanding' });
+    } else {
+      next();
+    }
+  });
+});
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <nav class="d-flex justify-content-start align-items-center gap-3">
-        <!-- <RouterLink :to="`${base}`">Menu(Week 1)</RouterLink>
-        <RouterLink :to="`${base}register/`">Register(Week 2)</RouterLink>
-        <RouterLink :to="`${base}drink/`">Drink(Week 3)</RouterLink> -->
-        <RouterLink to="/">Menu(Week 1)</RouterLink>
-        <RouterLink to="/register">Register(Week 2)</RouterLink>
-        <RouterLink to="/drink">Drink(Week 3)</RouterLink>
-        <RouterLink to="/threec">3C Goods(Week 4-Extented)</RouterLink>
-      </nav>
-    </div>
-  </header>
   <RouterView />
 </template>
 

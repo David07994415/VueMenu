@@ -1,5 +1,6 @@
 <script setup>
 import { ref,computed } from 'vue'
+import NavRouter from '../components/NavRouter.vue'
 import DrinkItem from '../components/DrinkItem.vue'
 import CartItem from '../components/CartItem.vue'
 
@@ -140,6 +141,7 @@ const createOrder = () => {
 </script>
 
 <template>
+  <NavRouter />
   <h2>Week 3: Drink</h2>
   <div class="container mt-5">
     <div class="row">

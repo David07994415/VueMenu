@@ -1,5 +1,6 @@
 <script setup>
   import { ref } from 'vue'
+  import NavRouter from '../components/NavRouter.vue'
 
   let drinksArray = [
     { name: '珍珠奶茶', description: '香濃奶茶搭配QQ珍珠', price: 50, stock: 20,isEdit: false },
@@ -54,6 +55,7 @@
 </script>
 
 <template>
+  <NavRouter />
   <h2>Week 1: Menu</h2>
   <table>
     <thead>

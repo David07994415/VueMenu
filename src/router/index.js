@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import DrinkView from '../views/DrinkView.vue'
 import ThreecView from '../views/ThreecView.vue'
+import TodoLandingView from '../views/TodoLandingView.vue'
+import TodoListView from '../views/TodoListView.vue'
 
 const rawRoutes = [
   {
@@ -24,6 +26,16 @@ const rawRoutes = [
     path: '/Threec',
     //name: 'Home',
     component: ThreecView
+  },
+  {
+    path: '/TodoLanding',
+    //name: 'Home',
+    component: TodoLandingView
+  },
+  {
+    path: '/TodoList',
+    //name: 'Home',
+    component: TodoListView
   },
   // 可以在這裡加入更多 routes
 ]
